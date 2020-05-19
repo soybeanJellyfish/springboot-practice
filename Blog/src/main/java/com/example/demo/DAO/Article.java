@@ -26,4 +26,5 @@ public class Article implements Serializable {
     @CreationTimestamp
     @JsonFormat(pattern = "yyyy-MM-dd")
     private Timestamp insertTS;
+    private int pageview;
 }

@@ -43,11 +43,21 @@ public class ArticleServices {
     public Article getArticleById(int id ){
          Optional<Article> article = articleRepository.findById(id);
          if(article.isPresent())
-             return article.get();
+             return  incrementPageView(article.get());
          else
              return null;
 
     }
 
+    /**
+     * increment article pageview
+     * @param article
+     * @return article
+     */
 
+    public Article incrementPageView(Article article){
+        article.setPageview(article.getPageview() + 1);
+        articleRepository.save(article);
+        return article;
+    }
 }
