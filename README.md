@@ -3,5 +3,5 @@
 blog system
 
 To do:
-add unit test,
+~~add unit test,~~
 add redis
